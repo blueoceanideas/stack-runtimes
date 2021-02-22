@@ -1,4 +1,4 @@
-DOCKERFILES = $(wildcard Dockerfile*)
+DOCKERFILES = Dockerfile-8.0
 SRCS := $(shell find docker nginx-lua -type f)
 .PHONY: all
 all: images
