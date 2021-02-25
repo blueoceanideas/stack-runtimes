@@ -14,20 +14,4 @@
 # limitations under the License.
 set -e
 set -o pipefail
-
-title="$1"
-url="$2"
-user="$3"
-# escape quotes
-# due to: https://github.com/wp-cli/wp-cli/issues/5089
-pass=$(echo $4 | sed -e "s/'/\\\\\'/g" -e 's/"/\\\\"/g')
-email="$5"
-
-wp core install \
-    --title="$title" \
-    --url="$url" \
-    --admin_user="$user" \
-    --admin_password="$pass" \
-    --admin_email="$email" \
-    --skip-email \
-    "${@:6}"
+exit 0
